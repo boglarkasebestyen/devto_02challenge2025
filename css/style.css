@@ -15,6 +15,8 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  height: 100%; 
+  /* need it for the background img */
 }
 
 /*
@@ -83,6 +85,315 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* Base styles from your original CSS remain unchanged unless specified */
+
+/* Author's custom styles */
+
+/* Base styles from your original CSS remain unchanged unless specified */
+
+/* Author's custom styles */
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  height: 100%;
+  /* need height: 100%; for the background img */
+  overflow: hidden;
+  
+  background: #040605; 
+  background-image: url("../img/dust_cover.jpg") !important;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 24px 16px;
+}
+
+.text-container {
+  /* background-color: yellow; */
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* gap: 16px; */
+  gap: 8px;
+  width: 100%;
+  max-width: 800px; 
+}
+
+
+
+/* responsive text */
+h1.main-heading {
+  position: relative;
+  font-size: clamp(24px, 3vw, 56px); 
+  color: #ffff; 
+  margin-top: clamp(20px, 6vh, 60px); /* for dynamic top spacing without pushing too much on small screens */
+}
+
+h2.second-heading,
+h3.third-heading {
+  /* padding: 8px 32px; */
+  padding: 4px 24px; /* reduced padding to bring text closer */
+  margin: 0;
+  font-weight: normal;
+  color: #fff;
+}
+
+h2.second-heading {
+  font-size: clamp(18px, 2vw, 36px);
+  margin-bottom: 12px; 
+}
+
+h3.third-heading {
+  font-size: clamp(16px, 1.8vw, 32px);
+  margin-bottom: 50px;
+}
+
+.text-container h1, 
+.text-container h2, 
+.text-container h3 {
+  max-width: 800px; 
+  text-align: center; 
+  line-height: 1.6; 
+}
+
+
+.scratch-wrapper {
+  flex-grow: 0;     /* flex:1 gave it a large margin-top   */        
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;     /* gides any overflow if the ticket is too large */
+  /* background-color: blue; */
+  padding-top: 10px; /* reduced top padding to bring it closer to h3 */
+}
+
+
+/* scratch and flip container */
+.scratch-container {
+  width: 100%;          /* takes the full width of its parent */
+  max-height: 100%;     /* prevents it from exceeding the parent’s height */
+  aspect-ratio: 2 / 1;  /* keeps the ticket at a 2:1 ratio */
+  position: relative;   /* needed for absolute positioning of child elements */
+  background-color: #040605; /* swatched from the background image's color */
+}
+
+.download-container, 
+.reveal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px; /* ensures consistent spacing */
+  gap: 10px; /* adds even space between buttons */
+
+}
+
+#download-btn, #reveal-btn {
+  background-color: #E4572E; 
+  color: #fff;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+  display: inline-block;
+  /* width: 200px; ensures both buttons are equal */
+  width: clamp(160px, 20vw, 220px); /* scales properly */
+  padding: clamp(10px, 1.5vw, 14px) clamp(18px, 3vw, 24px);
+  text-align: center;
+  box-sizing: border-box;
+  border: none; /* removing default button borders */
+  cursor: pointer; /* it's always clickable */
+  pointer-events: auto; /* allows interaction */
+}
+
+#download-btn:hover,
+#reveal-btn:hover {
+  background-color: #D13F0E; 
+  outline: 3px solid #fff; /* high contrast focus */
+}
+
+#download-btn:focus,
+#reveal-btn:focus {
+  outline: 3px solid yellow !important; /* high-contrast focus */
+  outline-offset: 3px;
+}
+
+
+.flip-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px; /* adds a 3D depth for flip */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* hides the back side when facing away */
+}
+
+.flip-card-back {
+  transform: rotateY(180deg); /* rotates back side to face away initially */
+}
+
+.ticket {
+  width: 100%;
+  height: 100%;
+}
+
+.ticket img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: grabbing;
+}
+
+/* adjusting font sizes for smaller screens */
+@media (max-width: 600px) {
+  h1.main-heading {
+    font-size: clamp(18px, 6vw, 36px);
+  }
+  h2.second-heading {
+    font-size: clamp(16px, 5vw, 28px);
+  }
+  h3.third-heading {
+    font-size: clamp(14px, 4vw, 24px);
+  }
+  .scratch-wrapper {
+    padding-top: 5px; /* further reduced padding for small screens */
+  }
+  .scratch-container {
+    width: 100%;
+    max-height: 100%;
+    aspect-ratio: 2 / 1;
+  }
+}
+
+/* animating the text */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; visibility: hidden; }
+  100% { opacity: 1; visibility: visible; }
+}
+
+
+.text-container h1.main-heading,
+.text-container h2.second-heading,
+.text-container h3.third-heading,
+#download-btn,
+#reveal-btn,
+.qr-float {
+  opacity: 0;
+  visibility: hidden; /*prevents interaction while hidden, not good */
+}
+
+
+.text-container h1.main-heading { 
+  animation: fadeIn 10s linear forwards;
+  animation-delay: 0s; /* starts immediately */
+} 
+
+.text-container h2.second-heading { 
+  animation: fadeIn 12s linear forwards;
+  animation-delay: 5s; /* starts after h1 finishes */
+}
+
+.text-container h3.third-heading { 
+  animation: fadeIn 13s linear forwards;
+  animation-delay: 10s; /* starts after h2 finishes */
+} 
+
+#download-btn, #reveal-btn, .qr-float {
+  animation: fadeIn 10s linear forwards;
+  animation-delay: 15s; 
+}
+
+/* QR code */
+.qr-float {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: #ffff;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+.qr-float:hover {
+  background-color: #E4572E; 
+  padding: 10px 10px;
+  transition: background 0.3s ease-in-out;
+  outline: 3px solid #fff;
+} 
+
+/* .qr-float img {
+    width: 64px;
+    height: 64px;
+} */
+
+.qr-float img:focus {
+  outline: 10px solid #E4572E !important; 
+  outline-offset: 4px; 
+  border-radius: 4px; 
+  padding: 2px 2px;
+  /* background-color: #E4572E;  */
+  transition: background 0.3s ease-in-out;
+}
+
+
+/* Rest of your original CSS (helper classes, media queries, print styles) remains unchanged */
+
+
+/* ------------------------------- */
+
 
 /* ==========================================================================
    Helper classes
