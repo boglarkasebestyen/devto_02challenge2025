@@ -85,7 +85,7 @@ git clone [https://github.com/boglarkasebestyen/busojaras-ticket.git](), open **
 
 
 ### 🎯 Challenge Participation
-This project was created as part of the [DEV.to February Frontend Challenge](https://dev.to/devteam/join-us-for-the-next-frontend-challenge-february-edition-3070?bb=210331), focusing on interactive and engaging frontend experiences.
+This project was created as part of the [DEV.to February Frontend Challenge](https://dev.to/devteam/join-us-for-the-next-frontend-challenge-february-edition-3070?bb=210331), focusing on interactive and engaging frontend experiences. My submission can be viewed [here](https://dev.to/boglarkasebestyen/winter-festival-scratch-ticket-4ae2).
 
 ### 🌟 Credits
 * Festival Inspiration: Busójárás / Mohács Winter Festival, Hungary
