@@ -82,6 +82,9 @@ git clone [https://github.com/boglarkasebestyen/busojaras-ticket.git](), open **
 * Expanding accessibility by providing audio feedback.
 
 
+### 🎯 Challenge Participation
+This project was created as part of the [DEV.to February Frontend Challenge](https://dev.to/devteam/join-us-for-the-next-frontend-challenge-february-edition-3070?bb=210331), focusing on interactive and engaging frontend experiences.
+
 ### 🌟 Credits
 * Festival Inspiration: Busójárás / Mohács Winter Festival, Hungary
 * Images from Pexels
