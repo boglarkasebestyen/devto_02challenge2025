@@ -25,6 +25,8 @@
 	- Semantic structure for better accessibility.
 	- Custom styling, animations, and a visually appealing layout.
 	- Implements the scratch-off effect, ticket flip, and download functionality.
+* **Using HTML5 Boilerplate**
+ - This project was initially set up using HTML5 Boilerplate as a starting point for best practices in frontend development. The boilerplate provided a solid foundation with a well-structured HTML, CSS, and JavaScript setup, which was then extensively customized to implement the scratch-off effect, ticket flip, and accessibility improvements.
 
 ![Busójárás Ticket - Front](img/ticket-front.png)
 ![Busójárás Ticket - Back](img/ticket-back.png)
