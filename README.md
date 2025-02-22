@@ -1,5 +1,5 @@
 # Busójárás Scratch Ticket 🎭
-## A scratch-off digital ticket experience inspired by the Busójárás festival, where users reveal their fate by brushing away a digital dust layer.
+## A scratch-off digital ticket experience inspired by the Mohács Winter Festival, where users reveal their fate by brushing away a digital dust layer.
 
 <p align="center">
   <img src="img/video.gif" alt="Scratch Ticket Animation" width="500">
@@ -66,6 +66,8 @@
 	│── index.html
 	│── README.md
 
+### ✨ Live demo
+[Here](https://boglarkasebestyen.github.io/devto_02challenge2025/)
 
 
 ### 🛠️ Installation & Setup
