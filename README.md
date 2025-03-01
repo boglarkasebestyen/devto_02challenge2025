@@ -11,9 +11,9 @@
 * **Unique Design:** I created the ticket design entirely from scratch in **Canva** and **Figma**, drawing inspiration from traditional carnival aesthetics.
 * **Responsive Layout:**  Adapts to different screen sizes with flexible typography and layout.
 * **Accessibility Considerations:** 
- - WCAG-friendly colors and contrasts.
- - Keyboard navigability and focus indicators.
- - Proper use of semantic HTML elements.
+	- WCAG-friendly colors and contrasts.
+	- Keyboard navigability and focus indicators.
+	- Proper use of semantic HTML elements.
 * **Interactive Scratch Effect:** Users "scratch" away the dust layer using mouse or touch gestures.
 * **Dynamic Ticket Flip:** At random intervals, the ticket flips on its own, revealing the back side.
 * **Downloadable Ticket:**	Users can download both sides of their ticket as a single image, or scan the QR code to visit the official festival website.
