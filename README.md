@@ -26,7 +26,7 @@
 	- Custom styling, animations, and a visually appealing layout.
 	- Implements the scratch-off effect, ticket flip, and download functionality.
 * **Using HTML5 Boilerplate**
- - This project was initially set up using HTML5 Boilerplate as a starting point for best practices in frontend development. The boilerplate provided a solid foundation with a well-structured HTML, CSS, and JavaScript setup, which was then extensively customized to implement the scratch-off effect, ticket flip, and accessibility improvements.
+ 	- This project was initially set up using HTML5 Boilerplate as a starting point for best practices in frontend development. The boilerplate provided a solid foundation with a well-structured HTML, CSS, and JavaScript setup, which was then extensively customized to implement the scratch-off effect, ticket flip, and accessibility improvements.
 
 ![Busójárás Ticket - Front](img/ticket-front.png)
 ![Busójárás Ticket - Back](img/ticket-back.png)
@@ -43,13 +43,13 @@
 
 * **Keyboard Navigation**: 
  - All interactive elements (buttons, QR code) are reachable via Tab.
- - Custom focus outlines for clear visibility.
+ 	- Custom focus outlines for clear visibility.
 * **Color Contrast & Readability**:
- - Used high contrast colors (#E4572E for buttons, white text).
- - Ensured text is large and scales well on different screens.
+ 	- Used high contrast colors (#E4572E for buttons, white text).
+ 	- Ensured text is large and scales well on different screens.
 * **ARIA & Alternative Text**:
- - QR code has an accessible description.
- - Images use meaningful alt attributes.
+ 	- QR code has an accessible description.
+ 	- Images use meaningful alt attributes.
 
 ### 📂 Project Structure
 
